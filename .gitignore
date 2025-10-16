@@ -42,8 +42,8 @@ crash.log
 crash.*.log
 
 # Terraform variables and override files
-*.tfvars
-*.tfvars.json
+#*.tfvars
+#*.tfvars.json
 override.tf
 override.tf.json
 *_override.tf
