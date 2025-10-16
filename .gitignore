@@ -1,0 +1,61 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python build/dist files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# -----------------------------
+# Terraform
+# -----------------------------
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variables and override files
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# -----------------------------
+# System / OS
+# -----------------------------
+.DS_Store
+Thumbs.db
+

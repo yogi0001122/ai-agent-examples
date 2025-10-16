@@ -1,0 +1,50 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+    azapi = {
+      source  = "azure/azapi"   # ✅ CORRECT
+      version = "~> 2.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6.0"
+    }
+  }
+}
+
+# Setup providers
+provider "azapi" {
+}
+
+provider "azapi" {
+  alias           = "workload_subscription"
+  subscription_id = var.subscription_id_resources
+}
+
+provider "azapi" {
+  alias           = "infra_subscription"
+  subscription_id = var.subscription_id_infra
+}
+
+provider "azurerm" {
+  features {}
+  storage_use_azuread = true
+  subscription_id = var.subscription_id_infra
+}
+
+provider "azurerm" {
+  alias           = "workload_subscription"
+  subscription_id = var.subscription_id_resources
+  features {}
+  storage_use_azuread = true
+}
+
+provider "azurerm" {
+  alias           = "infra_subscription"
+  subscription_id = var.subscription_id_infra
+  features {}
+  storage_use_azuread = true
+}
